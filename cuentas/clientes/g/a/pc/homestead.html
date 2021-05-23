@@ -69,6 +69,392 @@
 
 
 <br> {j20may2021-3p-c}
+<br><br><br>
+<br> {v21may2021-3p-c}
+<br>git bash
+<br>$ ls -l
+<br>{no vale hacer Ctrl+C o Ctrl+V en la terminal de git bash }
+<br>$ pwd
+<br> / {no me funcionó}
+<br> usuario@usuario-PC MINGW64 /
+<br> $ cd ~/Homestead
+<br> usuario@usuario-PC MINGW64 ~/Homestead (main) {para copiar una linea de la terminal, tengo que dar 3 clicks izquierdos "se subraya toda la linea" 
+    <br> - después doy un clik derecho
+    <br> - le doy clik en Copy 
+    <br> - y en vscode le doy Ctrl+V }
+
+<br> $ ls
+<br> $ ls -l
+<br> $ bash init.sh
+<br> Homestead initialized! {si me funcionó}
+<br> $ code .
+<br> $ ssh-keygen -t rsa -C "you@homestead"
+<br> Generating public/private rsa key pair. {Estoy generando la llave ssh}
+<br> Enter file in which to save the key (/c/Users/usuario/.ssh/id_rsa): llavehomestead {En esta linea yo le escribí {llavehomestead} es el nombre del archivo}
+<br> Enter passphrase (empty for no passphrase): {en esta linea solo le di un Enter, por no poner una contraseña}
+<br> Enter same passphrase again: {igüal aquí le dí Enter porque en la linea anterior no le puse contraseña}
+<br>Your identification has been saved in llavehomestead {llavehomestead es la llave privada que me acaba de crear}
+<br>Your public key has been saved in llavehomestead.pub {llavehomestead.pub es la llave pública que me acaba de crear}
+<br>The key fingerprint is:
+<br>SHA256:UMFtr+uTPDVtoXDW3u1vIlhy/xadQSPfsRnbFd/6izk you@homestead
+
+<br>The key's randomart image is:
+
+<br>+---[RSA 3072]----+
+<br>|       .oo     ..|
+<br>|       .. o  . =+|
+<br>|      .  . . .+ &|
+<br>|       .  . + oBo|
+<br>|        S  = +.o=|
+<br>|          o * +++|
+<br>|         . O + .o|
+<br>|          B .E= =|
+<br>|         ..o +.*+|
+<br>+----[SHA256]-----+
+
+<br>
+<br>
+<br>$ ls -l
+<br>total 170
+<br>-rw-r--r-- 1 usuario 197121   2602 may 21 15:10 llavehomestead {ya me ha creado el archivo llavehomestead {esta es la llave privada}}
+<br>-rw-r--r-- 1 usuario 197121    567 may 21 15:10 llavehomestead.pub {aquí tengo también la llave pública con el nombre  llavehomestead.pub}
+<br>
+<br>$ pwd
+<br>/c/Users/usuario/Homestead {ya me funcionó}
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>vscode-homestead.yaml: En {authorize: ~/.ssh/id_rsa.pub} le borré esta parte {.ssh/id_rsa.pub}
+<br>y le escribo {Homestead/llavehomestead.pub}
+<br>en la linea 7 me queda {authorize: ~/Homestead/llavehomestead.pub}
+<br>
+<br>keys:
+- ~/.ssh/id_rsa {aquí le borro una parte de esta linea y lo pego lo que boy a copiar una parte de la linea de arriba}
+
+<br>{~/Homestead/llavehomestead} esto es lo que pegué
+<br> y me queda así en la linea 9 y 10
+<br>
+keys:
+    - ~/Homestead/llavehomestead
+
+<br>
+<br>
+<br>dentro de Homestead creo otra carpeta llamada {codigo}
+<br>
+folders:
+    - map: ~/code
+      to: /home/vagrant/code
+
+<br>{este folders lo voy a modificar}
+<br>
+folders:
+    - map: ~/Homestead/codigo
+      to: /home/vagrant/code
+
+<br>{y así me quedó este folders}
+<br>- esto también lo estoy tomando desde este enlace {https://desarrolloweb.com/articulos/instalar-homestead-para-laravel5.html}
+<br>
+<br>
+<br>
+<br>
+sites:
+    - map: homestead.test
+      to: /home/vagrant/code/public
+<br>{antes: sites linea 16, 17 y 18}
+<br>
+<br>
+sites:
+    - map: manual-homestead.net
+      to: /home/vagrant/code/manual-homestead/public
+<br>{después: sites linea 16, 17 y 18}
+<br>{yt- Instalar Homestead sobre Windows m12:46/21:14 <!-- https://www.youtube.com/watch?v=k9xQBKzpOjk -->}
+<br>
+<br>
+<br>
+<br>
+- En la pc doy clik en inicio - bloc de notas - clik derecho - Ejecutar como administrador - 
+        <br> Archivo - Abrir... o Ctrl+A - 
+        <br> ingreso a esta ruta {C:\Windows\System32\drivers\etc}
+        <br> Todos los archivos (*.*)
+        <br> hosts - Abrir 
+        <br> - Dentro de este archivo tengo que pegar la ip {192.168.10.10} que está indicada en el archivo homestead.yaml y lo tenes que hacer corresponder para el nombre de dominio que tu lo habeis inventado para este proyecto, en este caso es: {manual-homestead.net} 
+<br>
+192.168.10.10 manual-homestead.net   {Ctrl+C y le pego al final del archivo hosts} 
+<br>{manual-homestead.net} lo estoy trayendo desde
+<br>
+sites:
+    - map: manual-homestead.net
+      to: /home/vagrant/code/manual-homestead/public
+
+<br>
+<br>
+Archivo - Guardar o Ctrl+G - hosts - Guardar
+<br>
+
+<br>
+<br>
+<br>
+<br><br>
+Ahora vamos a volver a esta ventana del terminal {git bash}
+<br> $ ls -l
+<br>necesito este archivo {-rw-r--r-- 1 usuario 197121   2095 may 20 15:30 Vagrantfile}
+<br> $ vagrant up {le entendí que me dijo, que este comando es para arrancar mi maquina virtual}
+
+
+<br>This Vagrant environment has specified that it requires the Vagrant
+<br>version to satisfy the following version requirements:
+<br>
+<br>  >= 2.2.4
+<br>
+<br>You are running Vagrant 1.9.8, which does not satisfy
+<br>these requirements. Please change your Vagrant version or update
+<br>the Vagrantfile to allow this Vagrant version. However, be warned
+<br>that if the Vagrantfile has specified another version, it probably has
+<br>good reason to do so, and changing that may cause the environment to
+<br>not function properly.
+
+
+<br>{traducí del ingles al español}
+<br>
+<br> Este entorno Vagrant ha especificado que requiere Vagrant
+<br> versión para satisfacer los siguientes requisitos de versión:
+<br>
+<br>    > = 2.2.4
+<br>
+<br> Está ejecutando Vagrant 1.9.8, que no satisface
+<br> estos requisitos. Cambie su versión de Vagrant o actualice
+<br> el Vagrantfile para permitir esta versión de Vagrant. Sin embargo, ten cuidado
+<br> que si Vagrantfile ha especificado otra versión, probablemente tenga
+<br> una buena razón para hacerlo, y los cambios que pueden hacer que el entorno
+<br> No funciona correctamente.
+<br>
+<br>
+<br>
+Y por eso estoy descargando vagrant 2.2.4 desde aquí {https://www.vagrantup.com/downloads}
+<br>- En la pc - inicio - Panel de control\Todos los elementos de Panel de control\Programas y características
+<br> - Vagrant - Desinstalar
+<br> - ¿Está seguro que desea desinstalar vagrant? - si
+<br> - 
+<br>
+<br>
+<br>
+SMANDC{s22may2021-3a-c}
+<br>pc
+<br>Descargas - {vagrant_2.2.4_x86_64.msi}
+<br> Instalar - Ejecutar - Next - 
+<br> / I accept the terms in License Agreement - Next
+<br> c:\HashiCorp\Vagrant - Next - Install 
+<br> ¿Desea permitir que este programa instale software en el equipo? - si 
+<br> Installing Vagrant - Finish
+<br><br>
+
+You must restart your system for the configuration changes made to Vagrant to take effect.
+<br> Click Yes to restart now or No if you plan to manually restart later.
+
+<br><br>{esp}
+<br>
+Debe reiniciar su sistema para que los cambios de configuración realizados en Vagrant surtan efecto.
+<br> Haga clic en Sí para reiniciar ahora o en No si planea reiniciar manualmente más tarde.
+<br><br>
+Yes <br>
+Cerrando sesión - Apagando el equipo - Iniciando Windows
+<br>
+<br>
+<br>
+{s22may2021-4a-c}
+<br> abro {git bash} {le subrayo y luego presiono AltGr+{} y ya me queda dentro de las llaves lo que he subrayado}
+<br> usuario@usuario-PC MINGW64 /
+<br>$ cd ~/Homestead
+<br>usuario@usuario-PC MINGW64 ~/Homestead (main)
+<br>ls -l
+<br>
+<br>$ vagrant up {2do intento y me acaba de salir otro mensaje}
+<br>==> vagrant: A new version of Vagrant is available: 2.2.16 (installed version: 2.2.4)!
+<br>==> vagrant: To upgrade visit: https://www.vagrantup.com/downloads.html
+<br>
+<br>Bringing machine 'homestead' up with 'virtualbox' provider...
+<br>Failed to locate the powershell executable on the available PATH. Please
+<br>ensure powershell is installed and available on the local PATH, then
+<br>run the command again.
+<br>{esp}
+<br>==> vagrant: ¡Una nueva versión de Vagrant está disponible: 2.2.16 (versión instalada: 2.2.4)!
+<br> ==> vagabundo: Para actualizar, visite: https://www.vagrantup.com/downloads.html
+<br>
+<br> Trayendo la máquina 'homestead' con el proveedor de 'virtualbox' ...
+<br> No se pudo ubicar el ejecutable de PowerShell en la RUTA disponible. Por favor
+<br> asegúrese de que PowerShell esté instalado y disponible en la RUTA local, luego
+<br> Ejecute el comando de nuevo.
+<br>
+<br>google - https://www.vagrantup.com/downloads.html
+<br>presiono en donde dice {64-bit} y ya me empieza a descargar la nueva version de vagrant 2.2.16 {tiene 240MB}
+<br>pc: Descargas - 
+<br>
+<br>gitbash: $ vagrant up
+<br>Bringing machine 'homestead' up with 'virtualbox' provider...
+<br>Failed to locate the powershell executable on the available PATH. Please
+<br>ensure powershell is installed and available on the local PATH, then
+<br>run the command again.
+<br>{esp}
+<br>Trayendo la máquina 'homestead' con el proveedor de 'virtualbox' ...
+<br> No se pudo ubicar el ejecutable de PowerShell en la RUTA disponible. Por favor
+<br> asegúrese de que PowerShell esté instalado y disponible en la RUTA local, luego
+<br> el comando de nuevo.
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
