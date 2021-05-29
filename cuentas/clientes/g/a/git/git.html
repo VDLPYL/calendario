@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>git</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+
+    <h3>git en la pc</h3>
+    <p>
+
+<h4>Area de trabajo</h4>
+Los archivos que estan con rojo, estan en el area de trabajo
+<br>  usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/calendario/cuentas/clientes/g/a (master)
+
+<br> $ git init
+<br> $ ls
+<br> $ ls -l
+<br> $ ls -la {Muestra los archivos ocultos, como es el archivo .git}
+<br> $ ls -a
+<br> ./   .git/     git/         index.css  pc.html          sql.html
+<br> ../  .vscode/  github.html  pc/        psicologia.html
+<br> 
+<br> $ git status
+
+<br>
+<br>
+<h4>Area de preparación</h4>
+Los archivos que están con verde, están en el area de preparación
+<br>  Aprendiendo a escribir commits <!-- https://ed.team/cursos/git/01/07 -->
+<br> $ git add README.md {En-denantes no me funcionó este código, porque el archivo README.md a estado en otra carpeta}
+<br> $ git status {Ahora si ya me funcionó el código $ git add README.md }
+<br> $ git add sql.html
+<br> $ git status
+<br> $ git add psicologia.html
+<br> $ git commit {Me abre un editor de texto vim}
+<br> i {presiono la tecla i latina}
+<br> Esc {Es para dejar de escribir el commit}
+<br> :wq {ecribo :=dos puntos, w=write, q=quit, dejar o salir}
+<br> Enter {para salir}
+<br> 
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br>
+<h3>Fusionando ramas</h3> <!-- https://ed.team/cursos/git/03/05 9:10m -->
+usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/calendario (main)
+<br>$ git switch master {Estoy cambiando de la rama main a la rama master}
+<br>
+
+usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/calendario (master) {Ya estoy en la rama master}
+<br>$ git merge main {Aqui le estoy diciendo a mi pc, que me traiga todos los cambios que exista en la rama main a la rama master}
+<br>Already up to date. {Ya está actualizado.}
+<br>$ git log --oneline --all --graph --decorate
+<br>{No puedo eliminar una rama en la que estoy actualmente}
+<br>
+
+usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/calendario (master)
+<br>$ git branch
+<br>  main
+<br>* master
+<br>$ git branch -D main {Estoy eliminando la rama main}
+<br>Deleted branch main (was 577e204). {Se eliminó la rama principal (era 577e204).}
+<br>
+
+usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/calendario (master)
+<br>$ git branch
+<br>* master
+
+<br>
+usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/calendario (master)
+<br>$ ls
+<br>$ git status
+<br>$ git log --oneline --all --graph --decorate
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br>
+<h4>Otros comandos</h4>
+usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/calendario/cuentas/clientes/g/a (master)
+<br> $ git branch {Es para mirar las ramas}
+<br> * master
+<br> 
+<br>Cuando se crea una nueva carpeta o un nuevo archivo, es obligatorio hacer:_
+<br> $ git add pages/
+<br> $ git commit -m "Se agrega un nuevo archivo"
+<br> no se puede hacer $ git commit -am "titulo", este comendo solo sirve para archivos modificados
+<br> -am = add y -m
+
+
+
+
+
+<br><br><br><br><br><br>
+usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/calendario (master)
+<br> $ git branch {Es para mirar cuantas ramas tenemos}
+
+
+
+
+
+<br>Para cambiar de ramas existen dos formas
+<br> $ git checkout master {versión antigüa}
+<br> $ git switch main {Es para la versión nueva de git}
+<br> 
+
+<br><br><br><br><br><br><br>
+usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/calendario (master)
+<br>$ git checkout -b main {-b = branch = rama}{checkout=verificar}{Con este comando lo que estoy haciendo es, creando una nueva rama llamada main y al mismo tiempo, estoy ingresando a esa nueva rama llamada main}
+<br>
+usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/calendario (main)
+<br>$ git branch {Estoy listando todas las ramas que yo tengo}
+<br>* main {La rama que está marcada con *asterisco, es la rama que actualmente estoy utilizando}
+<br>  master {Esto significa que tengo dos ramas, rama master y rama main}
+
+<br>{En este momento estoy en la rama main}
+<br>$ git status
+<br>
+
+usuario@usuario-PC MINGW64 /d/VDLPYL/a/github (master)
+<br>$ git clone git@github.com:VDLPYL/calendario.git
+<br>fatal: destination path 'calendario' already exists and is not an empty directory. {fatal: la ruta de destino 'calendario' ya existe y no es un directorio vacío.}
+<br>$ cd calendario
+<br>usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/calendario (master)
+<br>$ ls
+<br>cuentas/  index.css  index.html  precios/
+<br>
+
+usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/calendario (master)
+<br>$ git status
+
+<br>$ cd cuentas
+<br>usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/calendario/cuentas (master)
+<br>$ git commit -m "s29may21"
+<br>$ git status
+<br>$ cd ..
+<br>$ git status
+<br>$ cd ..
+<br>$ ls
+<br>$ git status
+<br>$ git add . {no me funcionó}
+<br>$ git status
+<br>        modified:   a (modified content)
+<br>$ cd a
+<br>$ git status
+<br>         modified:   git/git.html
+<br>$ git add .
+<br>$ git status
+<br>$ git commit -m "2da mofificación del s29may2021 a las 11a-c"
+<br>$ git status {Eso fué todo en git y tengo qe seguir haciendo los mismos comandos para los demas archivos que se encuentran en las otras carpetas}
+<br>Ctrl + S {Ahorita le doy un Ctrl+S para güardar todos los cambios que he hecho hasta este momento y de nuevo tengo que volver a ingresar todos los comandos que he venido ingresando anteriormente}{s29may21-11a-c}
+<br> $ git status
+<br>         modified:   git/git.html
+<br> $ git add .
+<br>{Y asi sucesivamente otra vez}
+<br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<h6>
+    <p>
+        <a href="https://VDLPYL.github.io/calendario/cuentas/index.html">ingreso</a><!--ingreso-->
+    </p>
+</h6>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br> 
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<h6>
+    <p>
+        <a href="https://vdlpyl.github.io/calendario/precios">precios</a><!-- Servicio de carreras -->
+    </p>
+</h6>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<!--Solo tienes que ser Persitente-->
+</p>
+<h6>
+    <p>
+        <br><br><br>
+        <a href="https://vdlpyl.github.io/i">        i   </a><!--ahead-->
+        <br><br><br>  <br><br><br>  <br><br><br>
+        <br><br><br><br><br><br><br> <br><br><br><br><br><br><br>
+        <a href="https://vdlpyl.github.io/VDLPYL">VDLPYL</a><!--homepage-->
+    </p>
+</h6>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>g a github</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+
+    <h3>g a github</h3>
+    <p>
+
+<h4>Para empezar a utilizar vscode</h4>
+usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/calendario (master)
+<br> $ git init
+<br>$ ls
+<br>$ code .
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br>
+<h4>  Para poner un repositorio de github en la red</h4>
+
+1ro   settings
+<br> 2do pages
+<br> Source    Branch: main    /(root)    y dar click en Save
+<br> Options
+<br> GitHub Pages
+<br> Your site is published at <a href="https://VDLPYL.github.io/noticias">https://VDLPYL.github.io/noticias</a><!-- noticias -->
+
+<br><br><br>
+<h4> Crear llave ssh para conectar una pc con github</h4>
+<br> 1._ github - mi perfil - Settings
+<br> 2._ SSH and GPG keys
+
+<br> 3._ gitbash - usuario@usuario-PC MINGW64 /
+<br> 4._ $ cd
+<br> 5._ usuario@usuario-PC MINGW64 ~
+<br> 6._ ssh-keygen -t rsa
+<br><br><br>
+<br> $ cd .ssh/
+<br> usuario@usuario-PC MINGW64 ~/.ssh
+<br> $ ls
+<br> avi/  id_rsa  id_rsa.pub  known_hosts
+<br> usuario@usuario-PC MINGW64 ~/.ssh
+<br> $ ls -l
+<br> usuario@usuario-PC MINGW64 ~/.ssh
+<br> $
+<br>
+<br>
+<h4> Desargando un repositorio de github</h4>
+Ingreso a un proyecto
+<br> code - Clone - ssh - copiar la dirección
+<br> git@github.com:VDLPYL/ubicacion.git
+<br>git bash - 
+<br> usuario@usuario-PC MINGW64 /d/VDLPYL/a/github (master)
+<br>$ git clone git@github.com:VDLPYL/ubicacion.git
+<br> $ ls
+<br> a/  ayuda/  calendario/  i/  img/  noticias/  pruebas/  ubicacion/  varios/
+<br> usuario@usuario-PC MINGW64 /d/VDLPYL/a/github (master)
+<br> $ cd ubicacion
+<br> usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/ubicacion (main)
+<br> $ git log --oneline --all --graph --decorate {Es para visualizar el historial de este proyecto}
+<br> $ cd .. {Es para regresar una carpeta atras}
+<br> usuario@usuario-PC MINGW64 /d/VDLPYL/a/github (master)
+<br> $ cd ubicacion
+<br> usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/ubicacion (main)
+<br> $ ls
+<br> index.css  index.html
+<br> usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/ubicacion (main)
+<br> $ code . {Es para abrir con vscode}
+<br> modificamos - güardamos
+<br> usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/ubicacion (main)
+<br> $ git status
+<br> usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/ubicacion (main)
+<br> $ git add .
+<br> usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/ubicacion (main)
+<br> $ git commit -m "Primer commit"
+<br> usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/ubicacion (main)
+<br> $ git status
+<br> $ git log {Es para ver todos los commits que hemos creado}
+<br> q {La tecla "q" es para salir} {También vi que funcionó con la tecla Escape "Esc"}
+<br> usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/ubicacion (main)
+<br> $ git push origin main {Es para subir a la rama "main" de github}
+<br> $ git log --oneline --all --graph --decorate
+<br> * ec41411 (HEAD -> main, origin/main, origin/HEAD) Primer commit {Aquí dice que mi HEAD esta apuntando a la rama main de la pc y también esta apuntando a origin/main que es la rama main de github}
+<br> $ git remote -v
+<br> origin  git@github.com:VDLPYL/ubicacion.git (fetch) {(fetch) es para descargar la información}
+<br> origin  git@github.com:VDLPYL/ubicacion.git (push) {(push) es para subir la información}
+<br> <br><br><br>
+
+
+
+
+<br><br><br>
+<h4>Si hacemos un nuevo cambio en el proyecto y quiero subir a github tengo que volver hacer </h4>
+<br> $ git log --oneline --all --graph --decorate
+<br> $ git status
+<br> $ git add .
+<br> $ git commit -m "Genera el archivo de estilos"
+<br> $ git log --oneline --all --graph --decorate {Es para ver si se ha güardado el commit}
+<br> $ git push origin master {Siempre tengo que primero ver si voy a empujar a origin master o ha origin main}
+<br> $ $ git log --oneline --all --graph --decorate {Es para ver si ya ha subido el cambio a github}
+<br> 
+
+
+
+
+para descargar cualquier cambio desde github hasta git en la pc
+<br><br><br><br><br><br><br>
+usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/ubicacion (main)
+<br> $ git fetch origin
+<br> $ git log --oneline --all --graph --decorate
+<br> $ git pull origin master {Aquí le estoy diciendo que traiga todo lo que tenga en github a la pc}
+<br> fatal: couldn't find remote ref master
+<br><br>
+<!-- Subiendo nuestros cambios 16:40m {https://ed.team/cursos/git/04/04} {ma25may2021-5p-c}-->
+
+
+<br> para 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br>
+<h4> Subiendo cambio a github</h4>
+<br> Ingreso a un proyecto
+<br> code - Clone - ssh - copiar la dirección
+<br> git@github.com:VDLPYL/ubicacion.git
+<br> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>¿Cómo subo un cambio a la nube en github?</h2>
+1ro En mi pc, ingreso dentro de la carpeta de el proyecto o repositorio
+<br>2do Abro con la terminal GitBashHere
+<br>usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/calendario (master)
+<br> 3ro dentro de la terminal ingreso los siguientes comandos:
+<br>$ git init
+<br> $ ls
+<br> 4to abro el proyecto con vscode
+<br> $ code .
+<br> $ git status
+<br>$ git log --oneline --all --graph --decorate
+<br>$ git add .
+<br>$ git commit -m "Genera el archivo de estilos"
+<br>$ git log --oneline --all --graph --decorate
+<br><br>Para subir es muy importante ingresar primero estos comandos
+<br>$ git remote
+<br>$ git remote add origin git@github.com:VDLPYL/calendario.git
+<br>$ git remote
+<br>origin {respuesta}
+<br>$ git branch
+<br>* master {respuesta}
+<br>$ git log
+<br>$ git status
+<br><br>
+<br><!-- 4.4 - Subiendo nuestros cambios m13:21/16:38 {https://ed.team/cursos/git/04/04} {s29may21-7:21a-c} -->
+<br>$ git log --oneline --all --graph --decorate
+<br>
+
+<br>$ git remote -v {importante para saber a que repositorio voy a subir los cambios}
+<br>$ git log --oneline --all --graph --decorate
+<br>$ git fetch origin {Es primero, para traer los cambios que hay en la nube}
+<br>$ git log --oneline --all --graph --decorate
+<br><br>Por tantos commits que he realizado en la nube, me aparecio :dos puntos en donde me dice que si quiero seguir mirando mas commits anteriores tengo que presionar la fecha hacia abajo o hacia arriba si quiero regresar
+<br>q {tengo que presionar la tecla "q" para salir y regresar al modo normal de la terminal}
+<br> $ git pull origin master {Es para traer los cambios de la nube, hasta la pc}
+<br>
+<br>{m16:02/16:38 Entonces de esa manera ustedes pueden empujar código a la nube con $ git push origin y el nombre de la rama, pueden traerse información desde la nube con $ git fetch origin, y pueden jalarse información de la nube con $ git pull origin y el nombre de la rama  }
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>Otros comandos</h3>
+usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/calendario (master)
+<br>$ git push --delete origin master {Es para borrar la rama master en la nube}
+<br>$ git push origin master {Es para subir mi proyecto a una rama que aun no tengo en la nube}{Solo me subió los archivos en los cuales yo en mi pc le hice $ git add y el nombre del archivo $ git commit -m "nombre del commit"}
+<br>
+usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/calendario (master)
+<br>$ git log --oneline --all --graph --decorate {Es para mirar si se ha realizado el cambio}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<h6>
+    <p>
+        <a href="https://VDLPYL.github.io/calendario/cuentas/index.html">ingreso</a><!--ingreso-->
+    </p>
+</h6>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br> 
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<h6>
+    <p>
+        <a href="https://vdlpyl.github.io/calendario/precios">precios</a><!-- Servicio de carreras -->
+    </p>
+</h6>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<!--Solo tienes que ser Persitente-->
+</p>
+<h6>
+    <p>
+        <br><br><br>
+        <a href="https://vdlpyl.github.io/i">        i   </a><!--ahead-->
+        <br><br><br>  <br><br><br>  <br><br><br>
+        <br><br><br><br><br><br><br> <br><br><br><br><br><br><br>
+        <a href="https://vdlpyl.github.io/VDLPYL">VDLPYL</a><!--homepage-->
+    </p>
+</h6>
+</body>
+</html>
