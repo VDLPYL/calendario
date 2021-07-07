@@ -293,6 +293,97 @@ usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/calendario (master)
 
 
 
+<br><br><br><br><br><br><br>
+<h3>Creando un nuevo repositorio</h3>
+<pre>
+Para crear un nuevo repositorio dentro de github, lo primero que tuve que hacer es:
+- ir a github - repositories - new
+- escribí el nombre del nuevo repositorio {salud} que fué el repositorio Nº 21
+- Create repository
+
+
+
+- Luego en la pc, crear una nueva carpeta  con el nombre del nuevo repositorio.
+- después ingresar dentro de la carpeta 
+- click derecho 
+- Y abro la terminal de git  {Git Bash Here}, escribo los siguientes comandos:_
+
+
+
+
+
+
+usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/salud (master)
+$ git init
+Initialized empty Git repository in D:/VDLPYL/a/github/salud/.git/
+
+$ ls
+$ git status
+$ git remote
+$ git remote -v
+
+$ git remote add origin git@github.com:VDLPYL/salud.git
+
+$ git remote
+origin
+$ git remote -v
+origin  git@github.com:VDLPYL/salud.git (fetch)
+origin  git@github.com:VDLPYL/salud.git (push)
+
+$ code .
+$ code . {Este comando le ingreso 2 veces para que me aparesca <strong>Go Live</strong> que es el servidor de la pc, que sirve por el Puerto: 5500 }
+
+$ git status
+$ ls
+$ git add .
+$ git status
+
+$ git commit -m "creé el repositorio Nº 21 de nombre salud"
+
+$ git branch
+* master
+
+$ git push origin master
+$ git log --oneline --all --graph --decorate
+* 65014c1 (HEAD -> master, origin/master) creé el repositorio Nº 21 de nombre salud
+
+usuario@usuario-PC MINGW64 /d/VDLPYL/a/github/salud (master)
+$ clear {Es para borrar todo}
+X {Es para salir de la terminal de <strong>Git Bash Here</strong> }
+<!-- {d20jun2021-9p-c} -->
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
